@@ -1,13 +1,13 @@
 /*
  * @Author: lxk0301 https://gitee.com/lxk0301
  * @Date: 2020-08-19 16:12:40
- * @Last Modified by: whyour
+ * @Last Modified by: tuobiyashi
  * @Last Modified time: 2021-5-1 15:00:54
  * sendNotify 推送通知功能
  * @param text 通知头
  * @param desp 通知体
  * @param params 某些推送通知方式点击弹窗可跳转, 例：{ url: 'https://abc.com' }
- * @param author 作者仓库等信息  例：`本通知 By：https://github.com/whyour/qinglong`
+ * @param author 作者仓库等信息  例：`本通知 By：https://github.com/tuobiyashi/qinglong`
  */
 
 const querystring = require('querystring');
@@ -170,14 +170,14 @@ if (process.env.PUSH_PLUS_USER) {
  * @param text 通知头
  * @param desp 通知体
  * @param params 某些推送通知方式点击弹窗可跳转, 例：{ url: 'https://abc.com' }
- * @param author 作者仓库等信息  例：`本通知 By：https://github.com/whyour/qinglong`
+ * @param author 作者仓库等信息  例：`本通知 By：https://github.com/tuobiyashi/qinglong`
  * @returns {Promise<unknown>}
  */
 async function sendNotify(
   text,
   desp,
   params = {},
-  author = '\n\n本通知 By：https://github.com/whyour/qinglong',
+  author = '\n\n本通知 By：https://github.com/tuobiyashi/qinglong',
 ) {
   //提供6种通知
   desp += author; //增加作者信息，防止被贩卖等
@@ -609,7 +609,7 @@ function qywxamNotify(text, desp) {
               textcard: {
                 title: `${text}`,
                 description: `${desp}`,
-                url: 'https://github.com/whyour/qinglong',
+                url: 'https://github.com/tuobiyashi/qinglong',
                 btntxt: '更多',
               },
             };
